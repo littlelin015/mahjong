@@ -71,15 +71,14 @@ function App() {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-md-6 A'>
-          <h3>麻將牌型</h3>
+        <div className='col-md-6 py-5'>
+          <h2 className='text-center my-3'>麻將牌型</h2>
           <Table className='table table-hover'>
             <thead className='table-light'>
               <tr>
-                {/* 應用寬度 class */}
                 <th className='col-name text-center'>牌型</th>
                 <th className='col-number text-center'>台數</th>
-                <th className='col-description text-center'>說明</th> {/* 這裡應用 col-description */}
+                <th className='col-description text-center'>說明</th>
               </tr>
             </thead>
             <tbody>
@@ -90,13 +89,13 @@ function App() {
                       <tr key={index} className={`${card.special ? 'special-type' : ''}`}>
                         <td className='col-name text-center'>{card.name}</td>
                         <td className='col-number text-center'>{card.number !== 0 ? card.number : "N"}</td>
-                        <td className='col-description'>{card.description}</td> {/* 這裡也應用 col-description */}
+                        <td className='col-description'>{card.description}</td>
                       </tr>
                     );
                   } else {
                     return (
                       <tr className="category-row">
-                        <td colSpan={3}>{card.description}</td> {/* 將 &nbsp; 替換成你的分類文字 */}
+                        <td colSpan={3}>{card.description}</td>
                       </tr>
                     );
                   }
@@ -105,8 +104,8 @@ function App() {
             </tbody>
           </Table>
         </div>
-        <div className='col-md-6 A'>
-          <h3>術語介紹</h3>
+        <div className='col-md-6 py-5'>
+          <h2 className='text-center my-3'>術語介紹</h2>
           <Table className='table table-hover'>
             <tbody>{properNoun.map(
                 (card, index) => {
