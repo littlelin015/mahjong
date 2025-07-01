@@ -1,6 +1,6 @@
-import './App.css'
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Tab, Table } from 'react-bootstrap'
+import { Table } from 'react-bootstrap';
 
 const twCardTypes = [
   {description:"莊家相關"},

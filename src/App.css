@@ -1,61 +1,59 @@
-/* 例如: App.css */
 
-/* 確保表格強制列寬 */
 .table {
-  table-layout: fixed; /* 這是關鍵，讓寬度設定生效 */
-  width: 100%; /* 讓表格佔滿可用寬度 */
-  border-collapse: collapse; /* 合併邊框 */
+  table-layout: fixed; 
+  width: 100%; 
+  border-collapse: collapse; 
 }
 
-/* 共用樣式 */
+
 .table th,
 .table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
-  vertical-align: top; /* 確保內容從上方對齊，特別是多行文字時 */
+  vertical-align: top; 
 }
 
-/* 設定 "牌型" 欄位的固定寬度 */
+
 .table .col-name {
-  width: 120px; /* 三個中文字符通常需要約 90-120px，這裡給多一點以確保完整顯示 */
+  width: 120px; 
 }
 
-/* 設定 "台數" 欄位的固定寬度 */
+
 .table .col-number {
-  width: 80px; /* 兩個中文字符通常需要約 60-80px */
+  width: 80px; 
 }
 
-/* "說明" 欄位樣式 */
+
 .table .col-description {
-  width: auto; /* 讓它自動填滿剩餘空間 */
-  white-space: normal; /* 允許文字自動換行 */
-  word-wrap: break-word; /* 防止長單字溢出 */
-  /* 如果您仍然希望在特定寬度下有最小限制，可以使用 min-width: 200px; */
+  width: auto; 
+  white-space: normal; 
+  word-wrap: break-word; 
+  
 }
 
-/* 確保固定寬度的欄位內容在固定寬度下不溢出 */
+
 .table .col-name,
 .table .col-number {
-  overflow: hidden;        /* 隱藏超出內容 */
-  text-overflow: ellipsis; /* 超出部分顯示省略號 */
-  white-space: nowrap;     /* 內容不換行 */
+  overflow: hidden;        
+  text-overflow: ellipsis; 
+  white-space: nowrap;     
 }
 
-/* special 牌型的樣式 (維持不變) */
+
 .special-type {
-  background-color: #FFFACD; /* 淡黃色背景 */
+  background-color: #FFFACD; 
   font-weight: bold;
-  color: #D2691E; /* 巧克力色文字，更顯眼 */
+  color: #D2691E; 
 }
 
-/* 新增分類列的樣式 */
+
 .category-row td {
-  background-color: #e0e0e0; /* 淺灰色背景，讓它看起來像一個區塊 */
-  font-weight: bold; /* 文字加粗 */
-  text-align: center; /* 文字置中 */
-  padding: 10px; /* 增加一些內邊距 */
-  border-top: 2px solid #ccc; /* 上方加粗邊框 */
-  border-bottom: 2px solid #ccc; /* 下方加粗邊框 */
-  color: #333; /* 深灰色文字 */
+  background-color: #e0e0e0; 
+  font-weight: bold; 
+  text-align: center; 
+  padding: 10px; 
+  border-top: 2px solid #ccc; 
+  border-bottom: 2px solid #ccc; 
+  color: #333; 
 }
